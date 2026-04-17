@@ -35,3 +35,12 @@ btn.addEventListener('click', () => {
         square.style.backgroundColor = 'white';
     })
 })
+
+
+const newGrid = document.createElement('button');
+
+newGrid.textContent = 'New Grid';
+newGrid.style.padding = '6px 12px';
+
+
+document.body.prepend(newGrid)
