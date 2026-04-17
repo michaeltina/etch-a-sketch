@@ -20,3 +20,12 @@ squares.forEach(square => {
         square.style.backgroundColor = 'lightgreen';
     })
 })
+
+const btn = document.createElement('button');
+
+btn.classList.add('button');
+btn.textContent = 'Clear All';
+btn.style.padding = '6px 12px' 
+btn.style.margin = '30px 0'
+
+document.body.append(btn)
