@@ -15,12 +15,6 @@ container.append(row)
 
 const squares = document.querySelectorAll('.square');
 
-squares.forEach(square => {
-    square.addEventListener('mouseover', () => {
-        square.style.backgroundColor = 'lightgreen';
-    })
-})
-
 const btn = document.createElement('button');
 
 btn.classList.add('button');
@@ -29,12 +23,6 @@ btn.style.padding = '6px 12px'
 btn.style.margin = '30px 0'
 
 document.body.append(btn);
-
-btn.addEventListener('click', () => {
-    squares.forEach( square => {
-        square.style.backgroundColor = 'white';
-    })
-})
 
 
 const newGrid = document.createElement('button');
@@ -54,6 +42,10 @@ function createGrid(size) {
         square.classList.add("square");
 
         row.append(square);
+
+        square.addEventListener('mouseover', () => {
+        square.style.backgroundColor = 'lightgreen';
+        })
     }
 container.append(row)
 }
@@ -65,4 +57,16 @@ newGrid.addEventListener('click', () => {
     const size = prompt('How many sqaures per side');
 
     createGrid(size);
+})
+
+squares.forEach(square => {
+    square.addEventListener('mouseover', () => {
+        square.style.backgroundColor = 'lightgreen';
+    })
+})
+
+btn.addEventListener('click', () => {
+    squares.forEach( square => {
+        square.style.backgroundColor = 'white';
+    })
 })
