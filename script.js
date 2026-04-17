@@ -42,5 +42,27 @@ const newGrid = document.createElement('button');
 newGrid.textContent = 'New Grid';
 newGrid.style.padding = '6px 12px';
 
+function createGrid(size) {
+    container.innerHTML = '';
 
-document.body.prepend(newGrid)
+    for (let row = 0; row < size; row ++) {
+        const row = document.createElement('div');
+        row.classList.add('row');
+
+    for (let column = 0; column < size; column ++){
+        const square = document.createElement('div');
+        square.classList.add("square");
+
+        row.append(square);
+    }
+container.append(row)
+}
+}
+
+document.body.prepend(newGrid);
+
+newGrid.addEventListener('click', () => {
+    const size = prompt('How many sqaures per side');
+
+    createGrid(size);
+})
