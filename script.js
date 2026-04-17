@@ -28,4 +28,10 @@ btn.textContent = 'Clear All';
 btn.style.padding = '6px 12px' 
 btn.style.margin = '30px 0'
 
-document.body.append(btn)
+document.body.append(btn);
+
+btn.addEventListener('click', () => {
+    squares.forEach( square => {
+        square.style.backgroundColor = 'white';
+    })
+})
